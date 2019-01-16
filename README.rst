@@ -9,13 +9,8 @@ community of contributors by allowing them to fork your projects and contribute
 to it via the now-popular pull-request mechanism.
 
 
-Homepage: https://pagure.io/pagure
-
-See it at work: https://pagure.io
-
-
-pagure-taiga is a plugin for pagure allowing to integrate pagure with
-`taiga <https://taiga.io/>`_.
+pagure-taiga is a plugin for pagure allowing to integrate `pagure
+<https://pagure.io/pagure>`_ with `taiga <https://taiga.io/>`_.
 
 It currently supports:
 
