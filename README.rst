@@ -32,7 +32,7 @@ Run a taiga instance:
 ^^^^^^^^^^^^^^^^^^^^^
 
 We advice to run taiga using `docker <https://hub.docker.com/search/?type=edition&offering=community>`_
-using the project `https://github.com/benhutchins/docker-taiga-example
+using the project `benhutchins/docker-taiga-example
 <https://github.com/benhutchins/docker-taiga-example>`_.
 
 * Clone the docker-taiga-example repo::
