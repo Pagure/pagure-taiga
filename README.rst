@@ -35,6 +35,34 @@ We advice to run taiga using `docker <https://hub.docker.com/search/?type=editio
 using the project `https://github.com/benhutchins/docker-taiga-example
 <https://github.com/benhutchins/docker-taiga-example>`_.
 
+* Clone the docker-taiga-example repo::
+
+    git clone https://github.com/benhutchins/docker-taiga-example.git
+
+* Adjust the ``docker-compose.yml`` file a little
+
+  * Un-comment the ``events``, ``rabbit`` and ``redis`` pods around line 12
+
+  * Un-comment the lines about the following pods around line 54:
+    ``rabbit``,  ``redis``, ``celery`` and ``events``
+
+* If you are already running a process on port 80 on your host you may want
+  to change in the ``docker-compose.yml`` file``- 80:80`` to ``- 8080:80``
+  under ``ports`` around line 7
+
+* Adjust taiga-conf/local.py by adding the following two lines::
+
+    WEBHOOKS_ENABLED = True
+    DEBUG = True  # Not necessary per say but can be useful
+
+* Build the containers::
+
+    sudo docker-compose build
+
+* Run the containers::
+
+    sudo docker-compose up
+
 
 Get pagure-taiga running
 ^^^^^^^^^^^^^^^^^^^^^^^^
