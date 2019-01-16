@@ -19,13 +19,13 @@ pagure-taiga is a plugin for pagure allowing to integrate pagure with
 
 It currently supports:
 
-- syncing new tickets from pagure to issue (scrum projects) or user-stories
-   (kanban projects) in taiga and from taiga to pagure
+* syncing new tickets from pagure to issue (scrum projects) or user-stories
+  (kanban projects) in taiga and from taiga to pagure
 
-- syncing new comments made on a ticket in pagure to taiga and from taiga
-   to pagure
+* syncing new comments made on a ticket in pagure to taiga and from taiga
+  to pagure
 
-- syncing issue/user-stories status update to pagure as tags and syncing
+* syncing issue/user-stories status update to pagure as tags and syncing
   tag update in pagure as status change in taiga if the tag correspond to
   one of the status in taiga
 
