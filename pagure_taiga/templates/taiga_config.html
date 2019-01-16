@@ -1,0 +1,33 @@
+
+{% from "_formhelper.html" import render_bootstrap_field %}
+
+{% block title %}{{ select.capitalize() }} - {{
+    g.repo.namespace + '/' if g.repo.namespace }}{{ g.repo.name }}{% endblock %}
+{% set tag = "home" %}
+
+
+{% block repo %}
+
+<div class="container p-t-3">
+  <div class="col-md-12 col-md-offset-2">
+    <div class="card">
+      <div class="card-header">
+        <strong>Configure taiga integration</strong>
+      </div>
+      <div class="card-block">
+        <form action="{{ url_for('taiga_ns.settings',
+              namespace=g.repo.namespace, repo=g.repo.name) }}" method="post">
+          {{ render_bootstrap_field(form.taiga_url) }}
+          {{ render_bootstrap_field(form.taiga_token) }}
+          {{ render_bootstrap_field(form.project_name) }}
+          {{ render_bootstrap_field(form.project_type) }}
+          <input type="submit" class="btn btn-primary" value="Configure">
+          <input type="button" value="Cancel" class="btn btn-secondary" onclick="history.back();">
+          {{ form.csrf_token }}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
